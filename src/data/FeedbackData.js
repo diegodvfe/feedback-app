@@ -22,9 +22,9 @@ const FeedbackData = [
     text: 'This was not good and enough'
   },
   {
-    id: 5,
+    id: 4,
     rating: 7,
-    tex:'Necesita ayuda en vida',
+    text: 'Ich mochte ein neu arbiet'
   },
 ]
 
