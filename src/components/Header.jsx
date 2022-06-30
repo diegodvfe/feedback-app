@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 
 function Header({text}) {
+
   return (
     <header>
       <div className="container">
@@ -13,7 +14,7 @@ function Header({text}) {
 }
 
 Header.defaultProps ={
-  text: 'Feedback UI,'
+  text: 'Feedback UI'
 }
 
 Header.propTypes ={
