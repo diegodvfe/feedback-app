@@ -1,9 +1,11 @@
-import Card from "./shared/Card"
 import { useState } from "react"
+import Card from "./shared/Card"
 import Button from "./Button"
+import RatingSelect from "./RatingSelect"
 
 function FeedbackForm() {
   const [text, setText] = useState('')
+  const [rating, setRating] = useState(10)
   const [btnDisabled, setBtnDisabled] = useState(true)
   const [message, setMessage] = useState('')
 
@@ -27,6 +29,7 @@ function FeedbackForm() {
       <form action="">
         <h2>How would you rate your service with us?</h2>
         {/* todo - rating select compaonet */}
+        <RatingSelect />
         <div className="input-group">
           <input
            onChange={handletextChange}
