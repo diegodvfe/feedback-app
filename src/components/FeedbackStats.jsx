@@ -1,5 +1,4 @@
-
-
+import PropTypes from 'prop-types'
 function FeedbackStats( {feedback}) {
 
   let average = feedback.reduce((acc, cur) =>{
@@ -16,4 +15,8 @@ function FeedbackStats( {feedback}) {
   )
 }
 
+FeedbackStats.propTypes = {
+  feedback: PropTypes.array.isRequired,
+  average: PropTypes.object.isRequired,
+}
 export default FeedbackStats
