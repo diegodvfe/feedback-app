@@ -11,17 +11,20 @@ export const FeedbackProvider = ({children}) =>{
             rating:10,
         }
     ])
+
+    const addFeedback = (newFeedback) =>{
+        newFeedback.id = uuidv4()
+        // console.log(newFeedback)
+        setFeedback([newFeedback, ...feedback])
+      }
+
     const deleteFeedback = (id) =>{
         if (window.confirm('Esta seguro de eliminar ?')){
           setFeedback(feedback.filter((item) => item.id !== id))
         }
       }
 
-      const addFeedback = (newFeedback) =>{
-        newFeedback.id = uuidv4()
-        console.log(newFeedback)
-        setFeedback([newFeedback, ...feedback])
-      }
+     
 
     return <FeedbackContext.Provider value={{
         feedback,
