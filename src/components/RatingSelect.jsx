@@ -82,9 +82,9 @@ function RatingSelect({select}) {
       </li>
        <li>
         <input type="radio"
-          id='num7'
+          id='num8'
           name='rating'
-          value='7'
+          value='8'
           onChange={handleChange}
           checked={selected === 8}
         />

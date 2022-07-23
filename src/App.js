@@ -7,6 +7,8 @@ import FeedbackStats from "./components/FeedbackStats"
 import FeedbackForm from "./components/FeedbackForm"
 import AboutPage from './pages/AboutPage'
 
+import { FeedbackProvider } from './context/FeedbackContext'
+
 import FeedbackData from "./data/FeedbackData"
 import AboutLink from './components/AboutLink';
 
@@ -15,7 +17,7 @@ function App (){
 
   const addFeedback = (newFeedback) =>{
     newFeedback.id = uuidv4()
-    // console.log(newFeedback)
+    console.log(newFeedback)
     setFeedback([newFeedback, ...feedback])
   }
 
@@ -26,6 +28,7 @@ function App (){
   }
 
   return (
+    <FeedbackProvider>
     <Router>
       <Header  />
       {/* <Routes> */}
@@ -43,7 +46,8 @@ function App (){
         </div>
 
       {/* </Routes> */}
-    </Router>
+        </Router>
+    </FeedbackProvider>
   )
 }
 
