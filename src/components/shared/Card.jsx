@@ -1,4 +1,4 @@
-import PropsTypes from 'prop-types'
+import PropTypes from 'prop-types'
 function Card({children, reverse}) {
   // return (
     // <div className={`card ${reverse && 'reverse'}`}>{children}</div>
@@ -18,7 +18,7 @@ Card.defaultProps = {
 }
 
 Card.propTypes ={
-  children: PropsTypes.node.isRequired,
-  reverse: PropsTypes.bool,
+  children: PropTypes.node.isRequired,
+  reverse: PropTypes.bool,
 }
 export default Card
