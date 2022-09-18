@@ -3,8 +3,10 @@ import {v4 as uuidv4} from 'uuid'
 
 const FeedbackContext = createContext()
 
+// The children has all the context to manage the props of the values. 
 export const FeedbackProvider = ({children}) =>{
-    const [feedback, setFeedback] = useState([
+    
+  const [feedback, setFeedback] = useState([
         {
             id: 1,
             text: 'This itme is from context',
@@ -14,19 +16,20 @@ export const FeedbackProvider = ({children}) =>{
 
     const addFeedback = (newFeedback) =>{
         newFeedback.id = uuidv4()
-        // console.log(newFeedback)
+        console.log(newFeedback)
         setFeedback([newFeedback, ...feedback])
       }
 
     const deleteFeedback = (id) =>{
-        if (window.confirm('Esta seguro de eliminar ?')){
+        if (window.confirm('Esta seguro de eliminar?')){
           setFeedback(feedback.filter((item) => item.id !== id))
         }
       }
 
      
 
-    return <FeedbackContext.Provider value={{
+    return <FeedbackContext.Provider 
+      value={{
         feedback,
         deleteFeedback, 
         addFeedback,
